@@ -23,7 +23,7 @@ body {
 
 /*container for layout*/
 .page {
-  height: 80%;
+  height: 90%;
   width: 80%;
   border-radius: 12px;
   overflow: hidden;
@@ -35,12 +35,12 @@ body {
 /*page content containers*/
 .page__info, .page__pic {
   width: 100%;
-  height: 100%;
+  height: 70%;
 }
 
 /*Container with pic*/
 .page__pic {
-  max-height: 50%;
+  height: 30%;
   background-image: url(./images/image-header-desktop.jpg);
   background-size: cover;
   background-position: center;
@@ -112,4 +112,89 @@ body {
 
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+
+/*===========media queries===========*/
+@media screen and (min-width: 425px) {
+  .page__pic {
+    width: 340px;
+    height: 270px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page__pic {
+    width: 610px;
+    height: 620px;
+    margin: auto;
+  }
+  .page__info-heading {
+    width: 60%;
+    margin-top: 10%;
+  }
+  .page__info-text {
+    width: 80%;
+  }
+  .page__info ul {
+    flex-direction: row;
+    margin-top: 5%;
+    width: 100%;
+    justify-content: center;
+  }
+  .page__info ul li {
+    margin-right: 10%;
+  }
+  .page__info ul li:nth-of-type(3) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .page__pic {
+    width: 820px;
+    height: 1420px;
+  }
+  .page__info-heading, .page__info-text {
+    margin-top: 0;
+  }
+  .page__info ul {
+    margin-top: 0;
+  }
+  .page__info ul li {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page {
+    flex-direction: row-reverse;
+    height: 50%;
+  }
+  .page__pic, .page__info {
+    width: 50%;
+    height: 100%;
+  }
+  .page__pic {
+    width: 50%;
+    height: 100%;
+  }
+  .page__info {
+    text-align: left;
+  }
+  .page__info-heading, .page__info-text {
+    width: 70%;
+    font-size: 1em;
+  }
+  .page__info-heading {
+    width: 70%;
+    font-size: 2.25em;
+  }
+  .page__info ul {
+    width: 70%;
+    justify-content: flex-start;
+  }
+  .page__info ul li {
+    font-size: 1.5em;
+  }
 }
